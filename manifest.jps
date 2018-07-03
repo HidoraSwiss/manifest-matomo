@@ -1,0 +1,26 @@
+type: install
+name: Piwik / Matomo
+categories: ["apps/content-management"]
+displayName: Matomo
+homepage: https://github.com/HidoraSwiss/manifest-matomo
+logo: https://matomo.org/wp-content/themes/website-child/assets/img/media/matomo.png
+description:  It is a free and open source web analytics application developed by a team of international developers, that runs on a PHP/MySQL webserver. It tracks online visits to one or more websites and displays reports on these visits for analysis
+ssl: true
+
+nodes:
+  - image: piwik
+    count: 1
+    cloudlets: 8
+    nodeGroup: cp
+    
+  - nodeType: mysql
+    count: 1
+    cloudlets: 8
+    nodeGroup: sqldb
+
+      
+
+success: | 
+ **Your environment Matomo has been installed successfully.**
+ 
+ **More information [here](https://github.com/HidoraSwiss/manifest-matomo) to configure your web analyzer.**
